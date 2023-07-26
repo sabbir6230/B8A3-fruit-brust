@@ -1,11 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBA#-FRUT-BRUST</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBA#-FRUT-BRUST</title>
+
+  <!-- tailwind & daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- lato google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- fontwesome -->
+  <script src="https://kit.fontawesome.com/7e5809f75c.js" crossorigin="anonymous"></script>
+
+  <style>
+    .font-lato {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
 </head>
+
 <body>
-    
+  <header>
+    <!-- navbar section -->
+    <nav class="bg-blue-500 ">
+      <div class="navbar container mx-auto bg-red-500 rounded-full">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <a class="flex lg:flex-row flex- items-center gap-4 text-white font-bold  lg:text-5xl">
+            <img src="./images/logo.png" alt="">
+            <p>Fruit Burst</p>
+          </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Item 1</a></li>
+            <li tabindex="0">
+              <details>
+                <summary>Parent</summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end py-3 px-4 hidden lg:flex">
+          <input type="search" placeholder="search" class="py-3 px-4 rounded-full">
+        </div>
+      </div>
+    </nav>
+
+    <!-- banner section -->
+    <section class="mt-10">
+      <div class="hero min-h-screen container mx-auto" style="background-image: url('./images/banner1.png')">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="">
+            <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your <br> doorstep</h1>
+            <p class="mb-5">We supply highly quality organic products</p>
+            <button class="py-3 px-4 rounded-xl bg-orange-600 border-none  text-white uppercase font-medium">shop now</button>
+          </div>
+        </div>
+      </div class="">
+      <div class="hidden lg:block lg:max-w-6xl mx-auto my-auto bg-blue-500 -mt-24 rounded-lg text-center py-6 mb-20">
+        <div class="flex justify-around items-center gap-14text-center">
+          <div>
+            <img src="./images/fruit1.png" alt="">
+            <p class="text-xl font-medium text-[rgba(18, 18, 18, 0.80); text-center]">Strawberry</p>
+          </div>
+          <div>
+            <img src="./images/fruit2.png" alt="">
+            <p class="text-xl font-medium text-[rgba(18, 18, 18, 0.80); text-center]">Strawberry</p>
+          </div>
+          <div>
+            <img src="./images/fruit3.png" alt="">
+            <p class="text-xl font-medium text-[rgba(18, 18, 18, 0.80); text-center]">Strawberry</p>
+          </div>
+          <div>
+            <img src="./images/fruit4.png" alt="">
+            <p class="text-xl font-medium text-[rgba(18, 18, 18, 0.80); text-center]">Strawberry</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- deal of the day section -->
+    <section class="container mx-auto">
+      <div class="flex lg:flex-row flex-col px-4 justify-between items-center container mx-auto">
+        <div class="mb-6 text-center lg:text-left">
+          <h3 class="font-extrabold text-4xl lg:text-5xl text-[#121212] my-6">Deal of the day</h3>
+          <p class="max-w-xl text-[#12121299] font-medium">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin
+            literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+        <div>
+          <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:15;"></span>
+              </span>
+              days
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:10;"></span>
+              </span>
+              hours
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:24;"></span>
+              </span>
+              min
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:51;"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- deal of the day items -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-between mt-7 mb-8 px-4 lg:px-0">
+        <!-- first item -->
+        <div class="text-center px-14 py-12 rounded-lg border border-[rgba(18, 18, 18, 0.10);] mt-6">
+          <img src="./images/fruit6.png" alt="" class="mx-auto mb-12">
+          <h4 class="font-bold text-[#121212] text-2xl  border-b-2 pb-4">12.90$ - 18.85$</h4>
+
+         <div class="space-y-2">
+          <h4 class="mt-4 font-medium text-[#12121299]"> Apple </h4>
+          <ul class="flex gap-1 justify-center text-orange-500">
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+          </ul>
+          <h3 class="text-[#f85559] font-bold text-xl">Details</h3>
+         </div>
+
+        </div>
+
+        
+        <!-- second item -->
+        <div class="text-center px-14 py-12 rounded-lg border border-[rgba(18, 18, 18, 0.10);] mt-6">
+          <img src="./images/fruit7.png" alt="" class="mx-auto mb-12">
+          <h4 class="font-bold text-[#121212] text-2xl  border-b-2 pb-4">12.90$ - 18.85$</h4>
+
+         <div class="space-y-2">
+          <h4 class="mt-4 font-medium text-[#12121299]"> Orange </h4>
+          <ul class="flex gap-1 justify-center text-orange-500">
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+          </ul>
+          <h3 class="text-[#f85559] font-bold text-xl">Details</h3>
+         </div>
+
+        </div>
+
+        <!-- third item -->
+        <div class="text-center px-14 py-12 rounded-lg border border-[rgba(18, 18, 18, 0.10);] mt-6">
+          <img src="./images/fruit8.png" alt="" class="mx-auto mb-12">
+          <h4 class="font-bold text-[#121212] text-2xl  border-b-2 pb-4">12.90$ - 18.85$</h4>
+
+         <div class="space-y-2">
+          <h4 class="mt-4 font-medium text-[#12121299]"> Red Dragon  </h4>
+          <ul class="flex gap-1 justify-center text-orange-500">
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+          </ul>
+          <h3 class="text-[#f85559] font-bold text-xl">Details</h3>
+         </div>
+
+        </div>
+
+        <!-- four item -->
+        <div class="text-center px-14 py-12 rounded-lg border border-[rgba(18, 18, 18, 0.10);] mt-6">
+          <img src="./images/fruit9.png" alt="" class="mx-auto mb-12">
+          <h4 class="font-bold text-[#121212] text-2xl  border-b-2 pb-4">12.90$ - 18.85$</h4>
+
+         <div class="space-y-2">
+          <h4 class="mt-4 font-medium text-[#12121299]"> Banana </h4>
+          <ul class="flex gap-1 justify-center text-orange-500">
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+          </ul>
+          <h3 class="text-[#f85559] font-bold text-xl">Details</h3>
+         </div>
+
+        </div>
+
+
+
+
+      </div>
+      <div class="flex justify-center my-12">
+        <button class="py-3 px-4 rounded-xl bg-orange-600 border-none  text-white uppercase font-medium">Shop All</button>
+      </div>
+    </section>
+  </header>
+  <main>
+
+  </main>
+  <footer>
+
+  </footer>
 </body>
+
 </html>
